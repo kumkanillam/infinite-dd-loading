@@ -1,0 +1,4 @@
+{{count}} 
+<button onmousedown={{perform incrementBy 1}} onmouseout={{cancel-all incrementBy}}> Increment </button>
+<button onmousedown={{perform incrementBy -1}} onmouseout={{cancel-all incrementBy}}> Decrement </button>
+{{yield}}

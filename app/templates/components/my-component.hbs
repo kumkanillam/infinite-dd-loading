@@ -1,0 +1,14 @@
+
+<input type="text" value={{searchVal}} onkeyup={{action 'doSearch' value="target.value"}} /> 
+{{#if searchTask.isRunning}}
+<span>Loading..</span>
+{{/if}} 
+<br />
+{{#if searchTask.isIdle}}
+Result: 
+{{#each searchTask.lastSuccessful.value.items as |value key|}}
+    {{value.full_name}}
+    <br />
+{{/each}}
+{{/if}}
+{{yield}}
