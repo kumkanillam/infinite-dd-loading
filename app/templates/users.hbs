@@ -1,9 +1,7 @@
-{{input value=name}}
-{{input value=email}}
-<button {{action "add" name email}}> ADD </button>
+{{add-button addUser=(action 'add')}}
+<button id="show-div-id" {{action 'showAddUser'}}> Show Div </button>
 <br />
 {{input value=searchStr }}
-{{!--<button {{action 'search'}}> Search</button>--}}
 {{#each model as |technician|}}
 <br />
  {{technician.name}} - {{technician.email}} <button {{action 'deleteRecord' technician.id}}> Del </button>

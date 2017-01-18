@@ -12,7 +12,10 @@ export default Ember.Route.extend({
         return this.store.findAll('technician');
     },
     actions: {
-        add(name, email) {
+        showAddUser() {
+            $('#AddDiv').toggle();
+        },
+        addUserInRoute(name, email) {
             let record = this.store.createRecord('technician', { name: name, email: email });
             record.save().then((result) => {
                 console.log('create success ', result);
